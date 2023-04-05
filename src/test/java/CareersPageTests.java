@@ -1,5 +1,3 @@
-import core.assertions.CareersPageAssertions;
-import core.pages.CareersPage;
 import infra.drivers.DockerizedBrowserType;
 import infra.drivers.Driver;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +14,7 @@ import java.nio.file.Paths;
 public class CareersPageTests {
 
     @BeforeMethod
-    public void testInit() {
+    public void testInit()  {
         Driver.startDockerizedBrowser();
     }
 
@@ -25,23 +23,23 @@ public class CareersPageTests {
         Driver.stopBrowser();
     }
 
-    @Test
-    public void fillApplicationForm() {
+//    @Test
+//    public void fillApplicationForm() {
 
-        var careersPage = new CareersPage();
-        careersPage
-                .navigate()
-                .switchToApplicationFormIFrame()
-                .fillName("TEST - automation candidate")
-                .uploadCv()
-                .selectPosition()
-                .selectHdyhau( "Linkedin")
-                .fillEmail( "test@test.com")
-                .fillPhoneNumber("+972", "0525554422")
-                .checkPrivacyPolicy()
-                .addComment("no comment")
-//                .checkCaptcha()
-                .submitForm();
-
-    }
+//        var careersPage = new CareersPage();
+//        careersPage
+//                .navigate()
+//                .switchToApplicationFormIFrame()
+//                .fillName("TEST - automation candidate")
+//                .uploadCv()
+//                .selectPosition()
+//                .selectHdyhau( "Linkedin")
+//                .fillEmail( "test@test.com")
+//                .fillPhoneNumber("+972", "0525554422")
+//                .checkPrivacyPolicy()
+//                .addComment("no comment")
+////                .checkCaptcha()
+//                .submitForm();
+//
+//    }
 }

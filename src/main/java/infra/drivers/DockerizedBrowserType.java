@@ -20,7 +20,7 @@ public enum DockerizedBrowserType {
 
         public WebDriver createDriver() {
 
-            WebDriverManager.getInstance(DriverManagerType.CHROME).browserInDocker().enableVnc().create();
+            WebDriverManager.getInstance(DriverManagerType.CHROME).browserInDocker().create();
 
             return new ChromeDriver(getOptions());
         }
@@ -29,12 +29,12 @@ public enum DockerizedBrowserType {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments(START_MAXIMIZED);
             chromeOptions.addArguments(ALLOW_ORIGINS);
-            chromeOptions.addArguments(NO_SANDBOX);
+//            chromeOptions.addArguments(NO_SANDBOX);
 //            chromeOptions.addArguments("disable-infobars");
 //            chromeOptions.addArguments("--disable-extensions");
-//            chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+            chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
 //            chromeOptions.addArguments("--headless");
-//            chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 
             return chromeOptions;
         }

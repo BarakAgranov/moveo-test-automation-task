@@ -1,0 +1,1 @@
+{"uuid":"d4076e97-84d0-43b0-a483-6bb50ef33f50","name":"WhizlabsTest.testInit","children":["bffe9cbb-fc97-4a13-9a61-e3f6b9558e66"],"description":"","befores":[{"name":"testInit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1680548849616,"stop":1680548855499}],"afters":[],"start":1680548849615,"stop":1680548855499}
